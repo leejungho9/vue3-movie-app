@@ -36,7 +36,7 @@ module.exports = {
           "math": "always"
         }],
         "vue/multi-word-component-names": ["error", {
-          "ignores": ['Home', 'About' , 'Header', 'Movie']
+          "ignores": ['Home', 'About' , 'Header', 'Movie', 'Logo', 'Headline', 'Search']
         }]
     }
   }

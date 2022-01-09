@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -36,6 +36,7 @@
     "webpack-dev-server": "^4.0.0-rc.1"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "bootstrap": "^5.0.0-beta3",
     "vue": "^3.2.26",
     "vue-router": "^4.0.12"
