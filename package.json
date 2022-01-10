@@ -38,8 +38,10 @@
   "dependencies": {
     "axios": "^0.24.0",
     "bootstrap": "^5.0.0-beta3",
+    "lodash": "^4.17.21",
     "vue": "^3.2.26",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "browserslist": [
     "> 1%",
