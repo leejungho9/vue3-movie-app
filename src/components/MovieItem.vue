@@ -47,9 +47,6 @@ export default {
         right: 0;
         border: 6px solid $primary
       }
-      // &:hover {
-      //   border: 6px solid $primary
-      // }
     .info{
       background-color : rgba($black, .3);
       width: 100%;
