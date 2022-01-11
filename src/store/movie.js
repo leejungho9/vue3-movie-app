@@ -9,7 +9,8 @@ export default {
     state: () => ({
         movies : [],
         message : 'Search for the movie title!',
-        loading : false
+        loading : false,
+        theMovie : {}
     }),
     // computed
     getters: {},
@@ -81,14 +82,38 @@ export default {
                     loading : false
                 })
             }
+        },
+        async searchMovieWithId({state, commit}, payload) {
+            if(state.loading) return 
+
+            commit('updateState', {
+                theMovie : {},
+                loading : true
+            })
+            try {
+                const res = await _fetchMovie(payload)
+                commit('updateState' , {
+                    theMovie : res.data
+                })
+            }catch(error) {
+                commit('updateState', {
+                    theMovie : {}
+                })
+            }finally {
+                commit('updateState', {
+                    loading : false
+                })
+            }
         }
     }
 }
 
 function _fetchMovie(payload) { //현재파일 내부에서만 실행
-    const {title, type, year, page} = payload
+    const {title, type, year, page, id} = payload
     const KEY ='7035c60c'
-    const url = `https://www.omdbapi.com/?i=tt3896198&apikey=${KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
+    const url = id 
+    ? `https://www.omdbapi.com/?i=tt3896198&apikey=${KEY}&i=${id}`
+    : `https://www.omdbapi.com/?i=tt3896198&apikey=${KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
     
     return  new Promise(function(resolve, reject ) {
         axios.get(url)
