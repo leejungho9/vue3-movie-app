@@ -84,7 +84,7 @@ export default {
             }
         },
         async searchMovieWithId({state, commit}, payload) {
-            if(state.loading) return 
+            if(state.loading) return
 
             commit('updateState', {
                 theMovie : {},
@@ -112,13 +112,13 @@ function _fetchMovie(payload) { //현재파일 내부에서만 실행
     const {title, type, year, page, id} = payload
     const KEY ='7035c60c'
     const url = id 
-    ? `https://www.omdbapi.com/?i=tt3896198&apikey=${KEY}&i=${id}`
-    : `https://www.omdbapi.com/?i=tt3896198&apikey=${KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
+    ? `https://www.omdbapi.com/?apikey=${KEY}&i=${id}`
+    : `https://www.omdbapi.com/?apikey=${KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
     
     return  new Promise(function(resolve, reject ) {
         axios.get(url)
         .then(res => {
-            console.log(res)
+            console.log( res)
             if(res.data.Error) {
                 reject(res.data.Error)
             }
