@@ -4,6 +4,7 @@ import { createRouter, createWebHashHistory} from 'vue-router'
 import Home from './Home'
 import Movie from './Movie'
 import About from './About'
+import NotFound from './NotFound'
 export default createRouter({
     // History 모드는 따로 서버에 따로 셋팅해야 함
     // Hash : 페이지를 찾을 수 없다는 메세지 방지할 수 잇음
@@ -25,6 +26,10 @@ export default createRouter({
             path : '/about',
             component : About
         },
+        {
+            path : '/:pathMatch(.*)',
+            component : NotFound
+        }
         
 
     ]

@@ -49,8 +49,8 @@ export default{
         console.log(this.$route)
         return path.test(this.$route.fullPath)
       }
-    }
-}
+    },
+   }
 </script>
 <style scoped lang="scss">
   header {
@@ -58,9 +58,14 @@ export default{
     padding: 0 40px;
     display: flex;
     align-items: center;
+    position: relative;
     .logo {
       margin-right: 40px;
     }
-
+  @include media-breakpoint-down(sm) {
+    .nav {
+      display : none;
+    }
   }
+}
 </style>

@@ -40,7 +40,12 @@ module.exports = {
                     'style-loader',   //해석된 내용을 html에 style 태그에 넣어줌
                     'css-loader' ,    //javascript에서 css파일을 해석하는 용도
                     'postcss-loader', //해석된 내용에 공급업체 접두사를 붙여줌
-                    'sass-loader'     //javascript에서 scss파일을 해석하는 용도
+                   {
+                    loader : 'sass-loader',     //javascript에서 scss파일을 해석하는 용도
+                    options : {
+                        additionalData : '@import "~/scss/main";' //전역으로 설정되었기 때문에 @import를 하지않아도 변수를 바로 사용가능
+                    }
+                   }
 
                 ]
             },
