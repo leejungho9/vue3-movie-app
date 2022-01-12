@@ -57,7 +57,7 @@ export default {
 
 
 <style scoped lang="scss">
-@import "~/scss/main";
+
   .movie{
     position: relative;
     $width: 200px;

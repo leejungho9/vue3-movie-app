@@ -119,7 +119,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "~/scss/main";
+
 
 .container {
   padding-top : 40px;
