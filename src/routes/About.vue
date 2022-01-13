@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import {mpaState} from 'vuex'
+import {mapState} from 'vuex'
 export default {
   computed: {
-    ...mpaState('about', [
+    ...mapState('about', [
       'image',
       'name',
       'email',

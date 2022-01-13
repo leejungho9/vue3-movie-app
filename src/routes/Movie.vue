@@ -89,7 +89,7 @@ export default {
     }
   },
   computed : {
-    ...mapState('movie'[
+    ...mapState('movie',[
       'theMovie',
       'loading'
     ])

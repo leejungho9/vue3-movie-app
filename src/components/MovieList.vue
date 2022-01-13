@@ -24,14 +24,14 @@
 <script> 
 import MovieItem from '~/components/MovieItem'
 import Loader from '~/components/Loader'
-import { mpaState} from 'vuex'
+import { mapState} from 'vuex'
 export default {
     components : {
         MovieItem,
         Loader
     },
     computed : {
-      ...mpaState('movie',[
+      ...mapState('movie',[
         'movies',
         'message',
         'loading'
