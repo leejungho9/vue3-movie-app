@@ -1,0 +1,47 @@
+[33mcommit 8e77833992fb987b33707bdca1c43c36cdb28b9c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Wed Jan 12 22:16:16 2022 +0900
+
+    push
+
+[33mcommit 59da28a78661712fc93e1218e8685a0e73c8937e[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Wed Jan 12 22:11:04 2022 +0900
+
+    add Breakpoint
+
+[33mcommit d02f9dc693956c70f4ee519aae426f0d22600e7b[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Wed Jan 12 15:12:01 2022 +0900
+
+    add plugins, Movie details
+
+[33mcommit bba2c9139ec41d6701c4f51c44839d84c874f2f2[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Tue Jan 11 18:09:27 2022 +0900
+
+    add Loader
+
+[33mcommit a0bd5795341ddefb4ae1d68e299bf00cd1918214[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Tue Jan 11 00:24:51 2022 +0900
+
+    add Footer
+
+[33mcommit 56110efac52cb153a38c68691219ffc26a44c280[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Mon Jan 10 21:44:46 2022 +0900
+
+    add MovieList, MovieItem, Vuex(store)
+
+[33mcommit 2f1030803de275f34de17d6349a084b00b1a9de3[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Sun Jan 9 22:30:17 2022 +0900
+
+    add Logo, Headline ,Search
+
+[33mcommit f92748a3518a76b423bdd6c6bd4c4bd869df70c1[m
+Author: leejungho9 <9wjdgh9@naver.com>
+Date:   Sat Jan 8 23:29:29 2022 +0900
+
+    Create project

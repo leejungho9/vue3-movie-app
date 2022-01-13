@@ -78,30 +78,32 @@
 
 <script> 
 import Loader from '../components/Loader.vue'
+import {mapState, mapActions} from 'vuex'
 export default {
   components: { 
     Loader 
-  },
-  computed : {
-    theMovie() {
-      return this.$store.state.movie.theMovie
-    },
-    loading() {
-      return this.$store.state.movie.loading
-    }
   },
   data() {
     return {
        imageLoading : true
     }
   },
+  computed : {
+    ...mapState('movie'[
+      'theMovie',
+      'loading'
+    ])
+  },
   created() {
     console.log(this.$route)
-    this.$store.dispatch('movie/searchMovieWithId',{
+      this.$store.dispatch('movie/searchMovieWithId',{
       id: this.$route.params.id
     })
   },
   methods : {
+    ...mapActions('movie', [
+      'searchMovieWithId'
+    ]),
     requestDiffSizeImage (url, size = 700){
       if(!url || url ==='N/A'){
         this.imageLoading = false
