@@ -1,10 +1,10 @@
 const axios = require('axios')
+const KEY = process.env.KEY
 
 exports.handler = async function(event) {
     console.log(event)
     const payload = JSON.parse(event.body)
     const {title, type, year, page, id} = payload
-    const KEY ='7035c60c'
     const url = id 
     ? `https://www.omdbapi.com/?apikey=${KEY}&i=${id}`
     : `https://www.omdbapi.com/?apikey=${KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
