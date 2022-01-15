@@ -77,10 +77,10 @@ export default {
                         })
                     }
                 }     
-            }catch (message) {
+            }catch ({message}) {
                 commit('updateState',{
                     movies : [],
-                    message
+                    message 
                 })
             }finally {
                 commit('updateState', {
@@ -113,24 +113,6 @@ export default {
     }
 }
 
-function _fetchMovie(payload) { //현재파일 내부에서만 실행
-    const {title, type, year, page, id} = payload
-    const KEY ='7035c60c'
-    const url = id 
-    ? `https://www.omdbapi.com/?apikey=${KEY}&i=${id}`
-    : `https://www.omdbapi.com/?apikey=${KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
-    
-    return  new Promise(function(resolve, reject ) {
-        axios.get(url)
-        .then(res => {
-            console.log( res)
-            if(res.data.Error) {
-                reject(res.data.Error)
-            }
-            resolve(res)
-        })
-        .catch( err => {
-            reject(err.message)
-        })
-    })
+async function _fetchMovie(payload) { //현재파일 내부에서만 실행
+   return await axios.post('/.netlify/functions/movie', payload)
 }
